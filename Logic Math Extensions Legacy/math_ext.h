@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 inline unsigned int ones_count(unsigned long long number)
 {
@@ -28,13 +29,16 @@ inline bool get_bit(unsigned long long value, unsigned long long bit_number)
 	return apply_bit_mask(value, mask) == mask;
 }
 
-inline unsigned int log2_int(unsigned long long value)
+inline unsigned int log2_int(unsigned long long x)
 {
-	unsigned int result = 0;
+	if (x <= 1) return 0;
 
-	while (value >= 1)
+	unsigned int result = 0;
+	unsigned int value = 1;
+
+	while (value < x)
 	{
-		value >>= 1;
+		value <<= 1;
 		result++;
 	}
 

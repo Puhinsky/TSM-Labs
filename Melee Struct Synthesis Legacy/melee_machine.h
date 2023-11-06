@@ -27,6 +27,7 @@ public:
 	{
 		_triggers_count = 0;
 	}
+
 	melee_machine(std::vector<dnf> triggers, std::vector<dnf> outs, state_map state_map, unsigned int triggers_count)
 	{
 		_triggers = triggers;
@@ -58,7 +59,7 @@ public:
 			result += (unsigned long long)_outs[i].calculate_function(value) << i;
 		}
 
-		return _state_map.code(result);
+		return result;
 	}
 
 	void print(std::ostream& os) const

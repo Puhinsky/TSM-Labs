@@ -113,7 +113,7 @@ public:
 	//lab2
 	bool calculate_function(unsigned long long value) const
 	{
-		return ((_number | value) & ~_pointer) != 0;
+		return ((_number ^ value) & ~_pointer) == 0;
 	}
 };
 

@@ -3,6 +3,7 @@
 #include "../Quine-McCluskey Optimizator Legacy/dnf.h"
 #include "state_map.h"
 #include "melee_machine.h"
+#include "table_value.h"
 
 class simulator
 {

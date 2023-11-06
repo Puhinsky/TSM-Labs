@@ -20,5 +20,5 @@ melee_machine struct_synthesis::synth()
 	trigger_synthesis t_synthesis(_f_table, _state_map);
 	out_synthesis o_synthesis(_g_table, _state_map);
 
-	return melee_machine(t_synthesis.synth(), o_synthesis.synth(), _state_map, log2(_f_table.get_width()));
+	return melee_machine(t_synthesis.synth(), o_synthesis.synth(), _state_map, log2_int(_f_table.get_width()));
 }

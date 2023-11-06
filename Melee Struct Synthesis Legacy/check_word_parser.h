@@ -16,7 +16,7 @@ public:
 
 		for (auto i = 0; i < _table.get_height(); ++i)
 		{
-			_inputs.push_back(_table.get_value(i, 0).get_value());
+			_inputs.push_back(_table.get_value(i, 0).get_value() - 1);
 			_states.push_back(_table.get_value(i, 1));
 			_outs.push_back(_table.get_value(i, 2));
 		}
@@ -24,17 +24,17 @@ public:
 
 	std::vector<unsigned long long> get_inputs()
 	{
-
+		return _inputs;
 	}
 
 	std::vector<table_value> get_states()
 	{
-
+		return _states;
 	}
 
 	std::vector<table_value> get_outs()
 	{
-
+		return _outs;
 	}
 };
 
