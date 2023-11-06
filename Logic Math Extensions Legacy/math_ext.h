@@ -1,6 +1,6 @@
-export module math_ext;
+#pragma once
 
-export unsigned int ones_count(unsigned long long number)
+inline unsigned int ones_count(unsigned long long number)
 {
 	unsigned long long bit = 1;
 	unsigned int counter = 0;
@@ -16,19 +16,19 @@ export unsigned int ones_count(unsigned long long number)
 	return counter;
 }
 
-export unsigned long long apply_bit_mask(unsigned long long value, unsigned long long mask)
+inline unsigned long long apply_bit_mask(unsigned long long value, unsigned long long mask)
 {
 	return value & mask;
 }
 
-export bool get_bit(unsigned long long value, unsigned long long bit_number)
+inline bool get_bit(unsigned long long value, unsigned long long bit_number)
 {
 	unsigned long long mask = (unsigned long long)1 << bit_number;
 
 	return apply_bit_mask(value, mask) == mask;
 }
 
-export unsigned int log2_int(unsigned long long value)
+inline unsigned int log2_int(unsigned long long value)
 {
 	unsigned int result = 0;
 
@@ -40,3 +40,4 @@ export unsigned int log2_int(unsigned long long value)
 
 	return result;
 }
+

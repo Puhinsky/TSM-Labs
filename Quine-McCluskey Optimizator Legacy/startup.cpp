@@ -1,5 +1,6 @@
-import dnf_reader;
-import dnf_writer;
+#include "dnf_reader.h"
+#include "dnf_writer.h"
+#include <iostream>
 
 int main()
 {
@@ -9,6 +10,7 @@ int main()
 
 	dnf.min_to_mdnf();
 
+	dnf.print(std::cout);
 	write_dnf(dnf, "output.txt");
 
 	return 0;

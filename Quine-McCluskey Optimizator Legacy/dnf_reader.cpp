@@ -1,18 +1,11 @@
-export module dnf_reader;
-
-import <string>;
-import <fstream>;
-import <vector>;
-import <map>;
-import dnf;
-import logic_value;
-import minterms_set;
+#include "dnf_reader.h"
 
 std::map<char, logic_value> logic_map = {
 	{'0', FALSE},
 	{'1', TRUE},
 	{'-', UNDETERMINED}
 };
+
 
 std::string read_line(std::string file_path, unsigned int line_number)
 {
@@ -56,7 +49,7 @@ dnf get_dnf(std::vector<logic_value> function)
 	return dnf(minterms, function.size());
 }
 
-export dnf read_dnf(std::string file_path)
+dnf read_dnf(std::string file_path)
 {
 	return get_dnf(parse(read_line(file_path, 0)));
 }

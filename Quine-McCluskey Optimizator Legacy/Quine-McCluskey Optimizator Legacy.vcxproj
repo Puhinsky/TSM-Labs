@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0e2f3294-0dd6-40b0-b6e9-a5b786a8c65b}</ProjectGuid>
-    <RootNamespace>MeleeStructSintesis</RootNamespace>
+    <ProjectGuid>{d08eb962-56c5-4793-9d26-91e03fdba36f}</ProjectGuid>
+    <RootNamespace>QuineMcCluskeyOptimizatorLegacy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Melee Struct Sinthesis</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -105,10 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <EnableModules>true</EnableModules>
-      <BuildStlModules>true</BuildStlModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,13 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="generic_sinthesis.ixx" />
-    <ClCompile Include="input_table.ixx" />
-    <ClCompile Include="start_up.cpp" />
-    <ClCompile Include="state_map.ixx" />
-    <ClCompile Include="table_value.ixx" />
-    <ClCompile Include="table_value_type.ixx" />
-    <ClCompile Include="trigger_sinthesis.ixx" />
+    <ClCompile Include="coverage_table.cpp" />
+    <ClCompile Include="dnf.cpp" />
+    <ClCompile Include="dnf_reader.cpp" />
+    <ClCompile Include="dnf_writer.cpp" />
+    <ClCompile Include="minterm.cpp" />
+    <ClCompile Include="startup.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="coverage_table.h" />
+    <ClInclude Include="dnf.h" />
+    <ClInclude Include="dnf_reader.h" />
+    <ClInclude Include="dnf_writer.h" />
+    <ClInclude Include="logic_value.h" />
+    <ClInclude Include="minterm.h" />
+    <ClInclude Include="minterm_set.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
