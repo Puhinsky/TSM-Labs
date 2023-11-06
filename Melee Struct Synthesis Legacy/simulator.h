@@ -29,10 +29,12 @@ public:
 
 		for (auto input : _inputs)
 		{
-			_outs.push_back(_melee_machine.get_out(input, state));
+			_outs.push_back(_melee_machine.get_out(input - 1, state));
 			_states.push_back(state);
-			state = _melee_machine.get_next_state(input, state);
+			state = _melee_machine.get_next_state(input - 1, state);
 		}
+
+		_states.push_back(state);
 	}
 
 	std::vector<unsigned long long> get_states()

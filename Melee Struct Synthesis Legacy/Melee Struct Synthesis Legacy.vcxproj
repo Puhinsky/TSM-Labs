@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="check_word_parser.cpp" />
+    <ClCompile Include="check_word_writer.cpp" />
     <ClCompile Include="generic_synthesis.cpp" />
     <ClCompile Include="input_table.cpp" />
     <ClCompile Include="melee_machine.cpp" />
@@ -142,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check_word_parser.h" />
+    <ClInclude Include="check_word_writer.h" />
     <ClInclude Include="generic_synthesis.h" />
     <ClInclude Include="input_table.h" />
     <ClInclude Include="melee_machine.h" />
