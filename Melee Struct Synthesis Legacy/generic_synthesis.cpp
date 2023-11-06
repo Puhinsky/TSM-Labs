@@ -61,5 +61,5 @@ std::vector<dnf> generic_synthesis::get_dnfs()
 
 unsigned long long generic_synthesis::get_terms_count()
 {
-	return pow2(log2(_table.get_height()) + _triggers_count);
+	return pow2(log2_int(_table.get_height()) + _triggers_count);
 }
