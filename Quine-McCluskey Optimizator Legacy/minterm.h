@@ -109,5 +109,11 @@ public:
 				^ std::hash<unsigned long long>()(other._pointer);
 		}
 	};
+
+	//lab2
+	bool calculate_function(unsigned long long value) const
+	{
+		return ((_number | value) & ~_pointer) != 0;
+	}
 };
 

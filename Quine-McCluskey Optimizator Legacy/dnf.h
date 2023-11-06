@@ -66,5 +66,18 @@ public:
 			os << '\n';
 		}
 	}
+
+	//lab 2
+	bool calculate_function(unsigned long long value)
+	{
+		bool result = false;
+
+		for (auto& minterm : _minterms)
+		{
+			result |= minterm.calculate_function(value);
+		}
+
+		return result;
+	}
 };
 

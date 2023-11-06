@@ -7,14 +7,16 @@ int main()
 {
 	input_table f_table("f_table.txt");
 	input_table g_table("g_table.txt");
+	input_table check_word("check_word.txt");
 
 	struct_synthesis synthesis(f_table, g_table);
 
-	auto triggers = synthesis.synth_triggers();
-	auto outs = synthesis.synth_outs();
+	auto melee_machine = synthesis.synth();
 
-	write_synth_to_console(triggers, outs);
-	write_synth_to_file(triggers, outs, "output.txt");
+	melee_machine.print(std::cout);
+	write_synth(melee_machine, "output.txt");
+
+
 
 	return 0;
 }

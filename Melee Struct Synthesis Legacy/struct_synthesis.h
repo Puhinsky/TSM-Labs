@@ -3,6 +3,7 @@
 #include "state_map.h"
 #include "trigger_synthesis.h"
 #include "out_synthesis.h"
+#include "melee_machine.h"
 
 class struct_synthesis
 {
@@ -15,8 +16,7 @@ private:
 
 public:
 	struct_synthesis(input_table f_table, input_table g_table);
-	std::vector<dnf> synth_triggers();
-	std::vector<dnf> synth_outs();
+	melee_machine synth();
 };
 
 

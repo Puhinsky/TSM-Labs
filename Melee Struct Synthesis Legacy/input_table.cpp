@@ -1,7 +1,10 @@
 #include "input_table.h"
 
 input_table::input_table()
-{}
+{
+	_height = 0;
+	_width = 0;
+}
 
 input_table::input_table(std::string file_path)
 {

@@ -6,7 +6,7 @@ export class state_map
 {
 private:
 	bool _reversed;
-	std::vector<unsigned long long> _map;
+	std::vector<unsigned long long> _decode_map;
 public:
 	state_map(bool reversed = false);
 	void code(unsigned long long state);
@@ -21,12 +21,12 @@ state_map::state_map(bool reversed)
 void state_map::code(unsigned long long state)
 {
 	if (_reversed)
-		_map.insert(_map.begin(), state);
+		_decode_map.insert(_decode_map.begin(), state);
 	else
-		_map.push_back(state);
+		_decode_map.push_back(state);
 }
 
 unsigned long long state_map::decode(unsigned long long number)
 {
-	return _map[number];
+	return _decode_map[number];
 }

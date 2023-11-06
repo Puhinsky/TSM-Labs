@@ -4,7 +4,7 @@ void struct_synthesis::code_states()
 {
 	for (auto i = 1; i <= _f_table.get_width(); i++)
 	{
-		_state_map.code(i, i - 1);
+		_state_map.define(i, i - 1);
 	}
 }
 
@@ -15,16 +15,10 @@ struct_synthesis::struct_synthesis(input_table f_table, input_table g_table)
 	code_states();
 }
 
-std::vector<dnf> struct_synthesis::synth_triggers()
+melee_machine struct_synthesis::synth()
 {
-	trigger_synthesis synthesis(_f_table, _state_map);
+	trigger_synthesis t_synthesis(_f_table, _state_map);
+	out_synthesis o_synthesis(_g_table, _state_map);
 
-	return synthesis.synth();
-}
-
-std::vector<dnf> struct_synthesis::synth_outs()
-{
-	out_synthesis synthesis(_g_table, _state_map);
-
-	return synthesis.synth();
+	return melee_machine(t_synthesis.synth(), o_synthesis.synth(), _state_map, log2(_f_table.get_width()));
 }

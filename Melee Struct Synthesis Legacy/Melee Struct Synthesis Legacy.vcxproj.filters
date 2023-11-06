@@ -42,6 +42,15 @@
     <ClCompile Include="synth_writer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="simulator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="melee_machine.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="check_word_parser.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="table_value_type.h">
@@ -71,12 +80,24 @@
     <ClInclude Include="synth_writer.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="simulator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="melee_machine.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="check_word_parser.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="f_table.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
     <Text Include="g_table.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="check_word.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

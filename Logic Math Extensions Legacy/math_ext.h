@@ -46,3 +46,8 @@ inline unsigned long long pow2(unsigned long long value)
 	return (unsigned long long)1 << value;
 }
 
+inline unsigned long long concat_values(unsigned long long high, unsigned long long low, unsigned int shift)
+{
+	return (high << shift) + low;
+}
+
