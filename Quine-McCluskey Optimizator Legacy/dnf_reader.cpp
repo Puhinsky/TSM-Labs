@@ -1,9 +1,9 @@
 #include "dnf_reader.h"
 
 std::map<char, logic_value> logic_map = {
-	{'0', FALSE},
-	{'1', TRUE},
-	{'-', UNDETERMINED}
+	{'0', LV_FALSE},
+	{'1', LV_TRUE},
+	{'-', LV_UNDETERMINED}
 };
 
 
@@ -42,7 +42,7 @@ dnf get_dnf(std::vector<logic_value> function)
 	{
 		auto term = function[i];
 
-		if (term == TRUE or term == UNDETERMINED)
+		if (term == LV_TRUE or term == LV_UNDETERMINED)
 			minterms.insert(minterm(i, term));
 	}
 

@@ -18,6 +18,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Logic Math Extensions Legacy", "Logic Math Extensions Legacy\Logic Math Extensions Legacy.vcxproj", "{0C237FC2-53B4-4293-A3DC-230371013570}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Melee Struct Synthesis Legacy", "Melee Struct Synthesis Legacy\Melee Struct Synthesis Legacy.vcxproj", "{AA6C2A6A-59F1-47F0-BDCD-3B025DC30511}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D08EB962-56C5-4793-9D26-91E03FDBA36F} = {D08EB962-56C5-4793-9D26-91E03FDBA36F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

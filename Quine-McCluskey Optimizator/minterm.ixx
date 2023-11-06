@@ -93,7 +93,7 @@ bool minterm::is_concated() const
 
 bool minterm::is_undetermined() const
 {
-	return _logic == UNDETERMINED;
+	return _logic == LV_UNDETERMINED;
 }
 
 bool minterm::has_intersect(const minterm& other) const

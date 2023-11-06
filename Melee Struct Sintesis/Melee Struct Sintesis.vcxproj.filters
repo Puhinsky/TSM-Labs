@@ -36,5 +36,8 @@
     <ClCompile Include="generic_sinthesis.ixx">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="struct_sinthesis.ixx">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

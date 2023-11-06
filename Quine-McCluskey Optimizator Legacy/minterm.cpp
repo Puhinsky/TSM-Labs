@@ -1,12 +1,5 @@
 #include "minterm.h"
 
-size_t minterm::hash::operator()(const minterm& other) const
-{
-	return std::hash<unsigned long long>()(other._number)
-		^ std::hash<unsigned long long>()(other._index)
-		^ std::hash<unsigned long long>()(other._pointer);
-}
-
 void minterm::calculate_index()
 {
 	_index = ones_count(_number);
@@ -22,20 +15,11 @@ bool minterm::can_concat(const minterm& other) const
 
 minterm::minterm()
 {
-	_logic = TRUE;
+	_logic = LV_TRUE;
 	_number = 0;
 	_pointer = 0;
 	_index = 0;
 	_is_concated = false;
-}
-
-minterm::minterm(unsigned long long number, logic_value logic)
-{
-	_logic = logic;
-	_number = number;
-	_pointer = 0;
-	_is_concated = false;
-	calculate_index();
 }
 
 bool minterm::try_concat(const minterm& other, minterm& out) const
@@ -63,19 +47,12 @@ bool minterm::is_concated() const
 
 bool minterm::is_undetermined() const
 {
-	return _logic == UNDETERMINED;
+	return _logic == LV_UNDETERMINED;
 }
 
 bool minterm::has_intersect(const minterm& other) const
 {
 	return (_number & ~other._pointer) == other._number;
-}
-
-bool minterm::operator==(const minterm& other) const
-{
-	return _number == other._number
-		&& _index == other._index
-		&& _pointer == other._pointer;
 }
 
 void minterm::print(std::ostream& os, unsigned long long terms_count) const

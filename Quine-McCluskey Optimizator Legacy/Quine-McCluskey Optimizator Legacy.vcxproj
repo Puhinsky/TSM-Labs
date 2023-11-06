@@ -127,11 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="coverage_table.cpp" />
-    <ClCompile Include="dnf.cpp" />
     <ClCompile Include="dnf_reader.cpp" />
     <ClCompile Include="dnf_writer.cpp" />
-    <ClCompile Include="minterm.cpp" />
     <ClCompile Include="startup.cpp" />
   </ItemGroup>
   <ItemGroup>

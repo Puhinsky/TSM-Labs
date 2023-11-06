@@ -136,6 +136,7 @@
     <ClCompile Include="input_table.ixx" />
     <ClCompile Include="start_up.cpp" />
     <ClCompile Include="state_map.ixx" />
+    <ClCompile Include="struct_sinthesis.ixx" />
     <ClCompile Include="table_value.ixx" />
     <ClCompile Include="table_value_type.ixx" />
     <ClCompile Include="trigger_sinthesis.ixx" />

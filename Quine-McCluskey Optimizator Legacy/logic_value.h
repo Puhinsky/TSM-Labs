@@ -1,3 +1,3 @@
 #pragma once
 
-enum logic_value { FALSE, TRUE, UNDETERMINED };
+enum logic_value { LV_FALSE, LV_TRUE, LV_UNDETERMINED };

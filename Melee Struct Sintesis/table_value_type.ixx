@@ -1,3 +1,3 @@
 export module table_value_type;
 
-export enum table_value_type { VALUE, UNDETERMINED };
+export enum table_value_type { TV_VALUE, LV_UNDETERMINED };

@@ -41,3 +41,8 @@ inline unsigned int log2_int(unsigned long long value)
 	return result;
 }
 
+inline unsigned long long pow2(unsigned long long value)
+{
+	return (unsigned long long)1 << value;
+}
+

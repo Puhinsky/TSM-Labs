@@ -37,7 +37,7 @@ std::vector<minterms_set> trigger_sinthesis::synt()
 		{
 			auto raw_state = _f_table.get_value(row, column);
 
-			if (raw_state.get_type() == VALUE)
+			if (raw_state.get_type() == TV_VALUE)
 			{
 				auto state = _state_map.decode(raw_state.get_value());
 

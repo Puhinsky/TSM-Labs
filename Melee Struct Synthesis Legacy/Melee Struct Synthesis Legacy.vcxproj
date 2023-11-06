@@ -127,7 +127,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="generic_synthesis.cpp" />
+    <ClCompile Include="input_table.cpp" />
+    <ClCompile Include="out_synthesis.cpp" />
     <ClCompile Include="start_up.cpp" />
+    <ClCompile Include="state_map.cpp" />
+    <ClCompile Include="struct_synthesis.cpp" />
+    <ClCompile Include="synth_writer.cpp" />
+    <ClCompile Include="table_value.cpp" />
+    <ClCompile Include="trigger_synthesis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="generic_synthesis.h" />
+    <ClInclude Include="input_table.h" />
+    <ClInclude Include="out_synthesis.h" />
+    <ClInclude Include="state_map.h" />
+    <ClInclude Include="struct_synthesis.h" />
+    <ClInclude Include="synth_writer.h" />
+    <ClInclude Include="table_value.h" />
+    <ClInclude Include="table_value_type.h" />
+    <ClInclude Include="trigger_synthesis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="f_table.txt" />
+    <Text Include="g_table.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
