@@ -1,8 +1,8 @@
 #include "trigger_synthesis.h"
 
-void trigger_synthesis::on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_state)
+void trigger_synthesis::on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_value)
 {
-	auto state = _state_map.decode(raw_state);
+	auto state = _state_map.decode(raw_value);
 
 	for (auto trigger = 0; trigger < _triggers_count; trigger++)
 	{

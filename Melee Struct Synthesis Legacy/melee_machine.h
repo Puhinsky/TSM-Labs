@@ -38,7 +38,7 @@ public:
 
 	unsigned long long get_next_state(unsigned long long input, unsigned long long state)
 	{
-		unsigned long long value = concat_values(input, _state_map.decode(state), _triggers_count);
+		unsigned long long value = concat_values(input - 1, _state_map.decode(state), _triggers_count);
 		unsigned long long result = 0;
 
 		for (auto i = 0; i < _triggers.size(); ++i)
@@ -51,7 +51,7 @@ public:
 
 	unsigned long long get_out(unsigned long long input, unsigned long long state)
 	{
-		unsigned long long value = concat_values(input, _state_map.decode(state), _triggers_count);
+		unsigned long long value = concat_values(input - 1, _state_map.decode(state), _triggers_count);
 		unsigned long long result = 0;
 
 		for (auto i = 0; i < _outs.size(); ++i)

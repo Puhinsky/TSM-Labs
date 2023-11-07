@@ -27,11 +27,11 @@ private:
 	}
 
 protected:
-	virtual void on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_state)
+	virtual void on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_value)
 	{
 		for (auto out : _outs)
 		{
-			if (out == raw_state)
+			if (out == raw_value)
 				minterms_sets[out - 1].insert(minterm(get_minterm_number(row, _state_map.decode(column + 1), _triggers_count), LV_TRUE));
 		}
 	}

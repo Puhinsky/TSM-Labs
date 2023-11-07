@@ -11,7 +11,7 @@ private:
 	}
 
 protected:
-	virtual void on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_state);
+	virtual void on_table_value(unsigned long long row, unsigned long long column, unsigned long long raw_value);
 	virtual void on_table_undetermined(unsigned long long row, unsigned long long column);
 public:
 	trigger_synthesis(input_table table, state_map state_map) : generic_synthesis(table, state_map)

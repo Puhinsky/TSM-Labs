@@ -127,13 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="check_word_parser.cpp" />
     <ClCompile Include="check_word_writer.cpp" />
     <ClCompile Include="generic_synthesis.cpp" />
     <ClCompile Include="input_table.cpp" />
-    <ClCompile Include="melee_machine.cpp" />
-    <ClCompile Include="out_synthesis.cpp" />
-    <ClCompile Include="simulator.cpp" />
     <ClCompile Include="start_up.cpp" />
     <ClCompile Include="state_map.cpp" />
     <ClCompile Include="struct_synthesis.cpp" />

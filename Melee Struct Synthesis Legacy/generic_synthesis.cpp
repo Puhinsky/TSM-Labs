@@ -1,6 +1,5 @@
 #include "generic_synthesis.h"
 
-
 unsigned long long generic_synthesis::get_minterm_number(unsigned long long input, unsigned long long state, unsigned long long states_width)
 {
 	return (input << states_width) + state;

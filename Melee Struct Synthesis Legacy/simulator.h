@@ -29,9 +29,9 @@ public:
 
 		for (auto input : _inputs)
 		{
-			_outs.push_back(_melee_machine.get_out(input - 1, state));
+			_outs.push_back(_melee_machine.get_out(input, state));
 			_states.push_back(state);
-			state = _melee_machine.get_next_state(input - 1, state);
+			state = _melee_machine.get_next_state(input, state);
 		}
 
 		_states.push_back(state);
