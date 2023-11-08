@@ -12,7 +12,7 @@ std::string read_line(std::string file_path, unsigned int line_number)
 	std::ifstream is(file_path);
 	std::string line;
 
-	for (auto i = 0; i <= line_number; ++i)
+	for (unsigned int i = 0; i <= line_number; ++i)
 	{
 		getline(is, line);
 	}

@@ -85,13 +85,22 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="f_table.txt">
+    <Text Include="f_table_v2.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="g_table.txt">
+    <Text Include="g_table_v2.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="check_word.txt">
+    <Text Include="check_word_v2.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="g_table_v1.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="check_word_v1.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="f_table_v1.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

@@ -153,9 +153,12 @@
     <ClInclude Include="trigger_synthesis.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="check_word.txt" />
-    <Text Include="f_table.txt" />
-    <Text Include="g_table.txt" />
+    <Text Include="check_word_v1.txt" />
+    <Text Include="check_word_v2.txt" />
+    <Text Include="f_table_v1.txt" />
+    <Text Include="f_table_v2.txt" />
+    <Text Include="g_table_v1.txt" />
+    <Text Include="g_table_v2.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

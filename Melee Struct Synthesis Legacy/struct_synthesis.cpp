@@ -2,7 +2,7 @@
 
 void struct_synthesis::code_states()
 {
-	for (auto i = 1; i <= _f_table.get_width(); i++)
+	for (unsigned long long i = 1; i <= _f_table.get_width(); i++)
 	{
 		_state_map.define(i, i - 1);
 		//_state_map.define(i, _f_table.get_width() - i);

@@ -59,7 +59,7 @@ public:
 			result += (unsigned long long)_outs[i].calculate_function(value) << i;
 		}
 
-		return result;
+		return log2_int(result) + 1;
 	}
 
 	void print(std::ostream& os) const
