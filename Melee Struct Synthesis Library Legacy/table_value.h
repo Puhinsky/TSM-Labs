@@ -17,6 +17,14 @@ namespace melee_synthesis
 
 		unsigned long long get_value() const;
 		table_value_type get_type() const;
+		size_t get_hash() const;
+
+		bool operator == (const table_value& other) const;
+
+		struct hash
+		{
+			size_t operator()(const table_value& value) const;
+		};
 
 		friend std::istream& operator>>(std::istream& is, table_value& table_value);
 	};

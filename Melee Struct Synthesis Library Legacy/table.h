@@ -21,6 +21,7 @@ namespace melee_synthesis
 		table(unsigned long long width, unsigned long long height);
 		void set_size(unsigned long long width, unsigned long long height);
 		void load(std::string file_path);
+		void print(std::ostream& os);
 		void save(std::string file_path);
 		void set_value(unsigned long long row, unsigned long long column, table_value value);
 		table_value get_value(unsigned long long row, unsigned long long column) const;

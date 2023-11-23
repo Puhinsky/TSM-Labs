@@ -18,32 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="check_word_parser.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="check_word_parser.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="resources\check_word_v1.txt">
+    <Text Include="resources\f_table.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="resources\f_table_v1.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\g_table_v1.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\check_word_v2.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\f_table_v2.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\g_table_v2.txt">
+    <Text Include="resources\g_table.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

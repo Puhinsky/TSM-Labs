@@ -1,7 +1,6 @@
 #include <iostream>
 #include "check_word_parser.h"
 #include "../Melee Struct Synthesis Library Legacy/table.h"
-#include "../Melee Struct Synthesis Library Legacy/table.h"
 #include "../Melee Struct Synthesis Library Legacy/struct_synthesis.h"
 #include "../Melee Struct Synthesis Library Legacy/simulator.h"
 

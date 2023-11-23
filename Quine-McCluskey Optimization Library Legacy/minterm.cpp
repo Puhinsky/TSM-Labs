@@ -94,9 +94,9 @@ bool minterm::operator == (const minterm& other) const
 		&& _pointer == other._pointer;
 }
 
-size_t minterm::hash::operator()(const minterm& other) const
+size_t minterm::hash::operator()(const minterm& value) const
 {
-	return std::hash<unsigned long long>()(other._number)
-		^ std::hash<unsigned long long>()(other._index)
-		^ std::hash<unsigned long long>()(other._pointer);
+	return std::hash<unsigned long long>()(value._number)
+		^ std::hash<unsigned long long>()(value._index)
+		^ std::hash<unsigned long long>()(value._pointer);
 }

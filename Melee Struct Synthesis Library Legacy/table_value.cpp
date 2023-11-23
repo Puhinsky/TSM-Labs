@@ -38,6 +38,21 @@ table_value_type table_value::get_type() const
 	return _type;
 }
 
+size_t table_value::get_hash() const
+{
+	if (_type == TV_UNDETERMINED)
+		return 0;
+	else
+		return std::hash<unsigned long long>()(_value);
+}
+
+bool table_value::operator==(const table_value& other) const
+{
+	bool result = _type == TV_UNDETERMINED || other._type == TV_UNDETERMINED || _value == other._value;
+	
+	return result;
+}
+
 std::istream& melee_synthesis::operator>>(std::istream& is, table_value& table_value)
 {
 	std::string s;
@@ -54,4 +69,12 @@ std::istream& melee_synthesis::operator>>(std::istream& is, table_value& table_v
 	}
 
 	return is;
+}
+
+size_t table_value::hash::operator()(const table_value& value) const
+{
+	if (value._type == TV_UNDETERMINED)
+		return 0;
+	else
+		return std::hash<unsigned long long>()(value._value);
 }

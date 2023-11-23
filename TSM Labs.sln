@@ -13,6 +13,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Melee Struct Synthesis Libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Melee Struct Synthesis Executor Legacy", "Melee Struct Synthesis Executor Legacy\Melee Struct Synthesis Executor Legacy.vcxproj", "{B9027642-660E-4AB7-9CCE-B246F2E8095F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Paull-Unger Minimization Library Legacy", "Paull-Unger Minimization Library Legacy\Paull-Unger Minimization Library Legacy.vcxproj", "{88EC0CA0-8890-4AA9-979A-D2DA10976638}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Paull-Unger Minimization Executor Legacy", "Paull-Unger Minimization Executor Legacy\Paull-Unger Minimization Executor Legacy.vcxproj", "{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polish Inverse Notation Library Legacy", "Polish Inverse Notation Library Legacy\Polish Inverse Notation Library Legacy.vcxproj", "{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polish Inverse Notation Executor Legacy", "Polish Inverse Notation Executor Legacy\Polish Inverse Notation Executor Legacy.vcxproj", "{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +69,38 @@ Global
 		{B9027642-660E-4AB7-9CCE-B246F2E8095F}.Release|x64.Build.0 = Release|x64
 		{B9027642-660E-4AB7-9CCE-B246F2E8095F}.Release|x86.ActiveCfg = Release|Win32
 		{B9027642-660E-4AB7-9CCE-B246F2E8095F}.Release|x86.Build.0 = Release|Win32
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Debug|x64.ActiveCfg = Debug|x64
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Debug|x64.Build.0 = Debug|x64
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Debug|x86.ActiveCfg = Debug|Win32
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Debug|x86.Build.0 = Debug|Win32
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Release|x64.ActiveCfg = Release|x64
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Release|x64.Build.0 = Release|x64
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Release|x86.ActiveCfg = Release|Win32
+		{88EC0CA0-8890-4AA9-979A-D2DA10976638}.Release|x86.Build.0 = Release|Win32
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Debug|x64.ActiveCfg = Debug|x64
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Debug|x64.Build.0 = Debug|x64
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Debug|x86.ActiveCfg = Debug|Win32
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Debug|x86.Build.0 = Debug|Win32
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Release|x64.ActiveCfg = Release|x64
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Release|x64.Build.0 = Release|x64
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Release|x86.ActiveCfg = Release|Win32
+		{6B7182C7-94E4-407E-B94D-8A2FBEB8BB99}.Release|x86.Build.0 = Release|Win32
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Debug|x64.ActiveCfg = Debug|x64
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Debug|x64.Build.0 = Debug|x64
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Debug|x86.ActiveCfg = Debug|Win32
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Debug|x86.Build.0 = Debug|Win32
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Release|x64.ActiveCfg = Release|x64
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Release|x64.Build.0 = Release|x64
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Release|x86.ActiveCfg = Release|Win32
+		{8C7D3F68-922C-4E1D-9B9A-EA8AD7866C2D}.Release|x86.Build.0 = Release|Win32
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Debug|x64.ActiveCfg = Debug|x64
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Debug|x64.Build.0 = Debug|x64
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Debug|x86.ActiveCfg = Debug|Win32
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Debug|x86.Build.0 = Debug|Win32
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Release|x64.ActiveCfg = Release|x64
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Release|x64.Build.0 = Release|x64
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Release|x86.ActiveCfg = Release|Win32
+		{E0AA98C4-1A08-4D95-B112-ECBD623DD3DC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

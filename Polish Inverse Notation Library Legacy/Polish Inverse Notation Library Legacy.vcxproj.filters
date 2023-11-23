@@ -15,36 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="check_word_parser.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="check_word_parser.h">
+    <ClInclude Include="abstract_sm.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="lexem.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="translator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="pic_translator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="pic_location.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\check_word_v1.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\f_table_v1.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\g_table_v1.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\check_word_v2.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\f_table_v2.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
-    <Text Include="resources\g_table_v2.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
+    <ClCompile Include="abstract_sm.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="lexem.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="translator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="pic_translator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -59,10 +59,8 @@ void table::load(std::string file_path)
 	update_size();
 }
 
-void table::save(std::string file_path)
+void table::print(std::ostream& os)
 {
-	std::ofstream os(file_path);
-
 	for (const auto& row : _table)
 	{
 		for (const auto& value : row)
@@ -77,7 +75,12 @@ void table::save(std::string file_path)
 
 		os << '\n';
 	}
+}
 
+void table::save(std::string file_path)
+{
+	std::ofstream os(file_path);
+	print(os);
 	os.close();
 }
 

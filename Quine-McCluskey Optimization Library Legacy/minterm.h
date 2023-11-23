@@ -33,7 +33,7 @@ namespace quine_mc_cluskey
 
 		struct hash
 		{
-			size_t operator()(const minterm& other) const;
+			size_t operator()(const minterm& value) const;
 		};
 	};
 }
