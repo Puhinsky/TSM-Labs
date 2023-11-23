@@ -43,6 +43,7 @@ int main()
 	auto result = pic_calculator.run(pic_lexems);
 
 	print(cout, result, translator.get_id_map());
+	save(OUTPUT_S, result, translator.get_id_map());
 
 	return 0;
 }

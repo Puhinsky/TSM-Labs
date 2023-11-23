@@ -7,11 +7,12 @@ namespace polish_inverse
 	class lexem
 	{
 	private:
-		std::bitset<32> _value;
+		uint8_t _type;
+		int _code;
 	public:
-		lexem(unsigned int type, int code);
+		lexem(uint8_t type, int code);
 
-		int get_code() const;
 		uint8_t get_type() const;
+		int get_code() const;
 	};
 }
