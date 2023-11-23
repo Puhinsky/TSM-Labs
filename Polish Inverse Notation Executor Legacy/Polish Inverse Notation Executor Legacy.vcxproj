@@ -128,11 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="result_writer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Polish Inverse Notation Library Legacy\Polish Inverse Notation Library Legacy.vcxproj">
       <Project>{8c7d3f68-922c-4e1d-9b9a-ea8ad7866c2d}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="result_writer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

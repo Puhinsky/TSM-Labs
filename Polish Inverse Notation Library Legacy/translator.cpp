@@ -135,5 +135,12 @@ std::vector<pi::lexem> polish_inverse::translator::run()
 		}
 	}
 
+	is.close();
+
 	return lexems;
+}
+
+std::map<std::string, unsigned int> polish_inverse::translator::get_id_map()
+{
+	return _id_map;
 }

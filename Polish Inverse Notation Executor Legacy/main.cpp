@@ -2,9 +2,13 @@
 #include "../Melee Struct Synthesis Library Legacy/table.h"
 #include "../Polish Inverse Notation Library Legacy/translator.h"
 #include "../Polish Inverse Notation Library Legacy/pic_translator.h"
+#include "../Polish Inverse Notation Library Legacy/pic_calculator.h"
+#include "result_writer.h"
+#include <iostream>
 
 using namespace::polish_inverse;
 using namespace::melee_synthesis;
+using namespace::std;
 
 #define WORK_DIR "resources/"
 
@@ -32,9 +36,13 @@ int main()
 
 	translator translator(translation_sm, INPUT_L);
 	pic_translator pic_translator(pic_translation_sm);
+	pic_calculator pic_calculator;
 
 	auto lexems = translator.run();
 	auto pic_lexems = pic_translator.run(lexems);
+	auto result = pic_calculator.run(pic_lexems);
+
+	print(cout, result, translator.get_id_map());
 
 	return 0;
 }

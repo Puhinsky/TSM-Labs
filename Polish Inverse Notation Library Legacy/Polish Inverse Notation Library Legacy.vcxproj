@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="abstract_sm.h" />
     <ClInclude Include="lexem.h" />
+    <ClInclude Include="pic_calculator.h" />
     <ClInclude Include="pic_location.h" />
     <ClInclude Include="pic_translator.h" />
     <ClInclude Include="translator.h" />
@@ -140,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="abstract_sm.cpp" />
     <ClCompile Include="lexem.cpp" />
+    <ClCompile Include="pic_calculator.cpp" />
     <ClCompile Include="pic_translator.cpp" />
     <ClCompile Include="translator.cpp" />
   </ItemGroup>

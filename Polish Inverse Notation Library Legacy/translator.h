@@ -28,6 +28,7 @@ namespace polish_inverse
 	public:
 		translator(pi::abstract_sm state_machine, std::string expression_file_path);
 		std::vector<pi::lexem> run();
+		std::map<std::string, unsigned int> get_id_map();
 	};
 }
 
