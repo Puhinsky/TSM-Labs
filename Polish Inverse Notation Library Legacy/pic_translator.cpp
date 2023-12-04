@@ -25,7 +25,7 @@ int polish_inverse::pic_translator::get_rank(char symbol, pic_location location)
 	{
 		switch (symbol)
 		{
-		case '(': return 3;
+		case '(': return 4;
 		case ')': return 0;
 		case '+': return 1;
 		case '-': return 1;

@@ -1,5 +1,6 @@
 #include "../Melee Struct Synthesis Library Legacy/table.h"
-#include "../Paull-Unger Minimization Library Legacy/pre_comp_table.h"
+#include "../Paull-Unger Minimization Library Legacy/primary_compability_solver.h"
+#include "../Paull-Unger Minimization Library Legacy/full_compability_solver.h"
 
 using namespace::melee_synthesis;
 using namespace::paull_unger;
@@ -17,8 +18,11 @@ int main()
 	f_table.load(F_TABLE_L);
 	g_table.load(G_TABLE_L);
 
-	pre_comp_table table(f_table, g_table);
-	table.solve();
+	primary_compability_solver primary_solver(g_table);
+	auto primary_table = primary_solver.solve();
+
+	full_compability_solver full_solver(f_table);
+	auto full_table = full_solver.solve(primary_table);
 
 	return 0;
 }

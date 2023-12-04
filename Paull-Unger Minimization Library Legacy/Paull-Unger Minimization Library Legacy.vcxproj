@@ -131,12 +131,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="comp_pair.h" />
     <ClInclude Include="comp_table.h" />
+    <ClInclude Include="comp_type.h" />
+    <ClInclude Include="full_compability_solver.h" />
     <ClInclude Include="pair.h" />
+    <ClInclude Include="primary_compability_solver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="comp_pair.cpp" />
     <ClCompile Include="comp_table.cpp" />
+    <ClCompile Include="full_compability_solver.cpp" />
     <ClCompile Include="pair.cpp" />
+    <ClCompile Include="primary_compability_solver.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

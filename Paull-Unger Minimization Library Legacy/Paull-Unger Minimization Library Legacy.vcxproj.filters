@@ -21,12 +21,33 @@
     <ClInclude Include="comp_table.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="primary_compability_solver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="full_compability_solver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="comp_pair.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="comp_type.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pair.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="comp_table.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="primary_compability_solver.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="full_compability_solver.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="comp_pair.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
