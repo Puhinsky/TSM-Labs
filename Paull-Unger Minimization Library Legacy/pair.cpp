@@ -3,7 +3,10 @@
 using namespace::paull_unger;
 using namespace::melee_synthesis;
 
-pair::pair(table_value value_a,table_value value_b)
+paull_unger::pair::pair()
+{}
+
+pair::pair(table_value value_a, table_value value_b)
 {
 	_value_a = value_a;
 	_value_b = value_b;
@@ -38,12 +41,8 @@ bool pair::is_compatible_by_outs() const
 	return _value_a.get_value() == _value_b.get_value();
 }
 
-bool pair::is_full_determined() const
+size_t paull_unger::pair::hash::operator()(const pair& value) const
 {
-	return _value_a.get_type() == TV_VALUE && _value_b.get_type() == TV_VALUE;
-}
-
-bool pair::is_single() const
-{
-	return _value_a.get_value() == _value_b.get_value();
+	return std::hash<table_value>()(value._value_a)
+		^ std::hash<table_value>()(value._value_b);
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "../Melee Struct Synthesis Library Legacy/table.h"
 #include "comp_table.h"
+#include <stack>
 
 namespace ms = melee_synthesis;
 
@@ -12,7 +13,7 @@ namespace paull_unger
 		ms::table _f_table;
 		comp_table _comp_table;
 
-		bool check_compitability(pair main_pair);
+		bool check_compitability(pair main_pair, pair input_pair);
 
 	public:
 		full_compability_solver(ms::table f_table);

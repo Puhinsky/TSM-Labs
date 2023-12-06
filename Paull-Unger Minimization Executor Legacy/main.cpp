@@ -1,6 +1,7 @@
 #include "../Melee Struct Synthesis Library Legacy/table.h"
 #include "../Paull-Unger Minimization Library Legacy/primary_compability_solver.h"
 #include "../Paull-Unger Minimization Library Legacy/full_compability_solver.h"
+#include "../Paull-Unger Minimization Library Legacy/max_classes_solver.h"
 
 using namespace::melee_synthesis;
 using namespace::paull_unger;
@@ -23,6 +24,9 @@ int main()
 
 	full_compability_solver full_solver(f_table);
 	auto full_table = full_solver.solve(primary_table);
+
+	max_classes_solver max_classes_solver;
+	auto max_classes = max_classes_solver.solve(full_table);
 
 	return 0;
 }

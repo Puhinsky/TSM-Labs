@@ -18,7 +18,10 @@ namespace paull_unger
 		ms::table_value get_b() const;
 		bool is_compatible_by_outs() const;
 		bool is_compatible(const pair& other) const;
-		bool is_full_determined() const;
-		bool is_single() const;
+
+		struct hash
+		{
+			size_t operator()(const pair& value) const;
+		};
 	};
 }

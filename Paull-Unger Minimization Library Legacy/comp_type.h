@@ -1,3 +1,3 @@
 #pragma once
 
-enum comp_type { FULL, DEPENDENT, NONE };
+enum comp_type { FULL, DEPENDENT, NONE, CHECKED };
