@@ -135,6 +135,7 @@
     <ClInclude Include="comp_value.h" />
     <ClInclude Include="comp_table.h" />
     <ClInclude Include="comp_type.h" />
+    <ClInclude Include="fsm_builder.h" />
     <ClInclude Include="full_compability_solver.h" />
     <ClInclude Include="max_classes_solver.h" />
     <ClInclude Include="min_coverage_finder.h" />
@@ -146,6 +147,7 @@
     <ClCompile Include="class_set.cpp" />
     <ClCompile Include="comp_value.cpp" />
     <ClCompile Include="comp_table.cpp" />
+    <ClCompile Include="fsm_builder.cpp" />
     <ClCompile Include="full_compability_solver.cpp" />
     <ClCompile Include="max_classes_solver.cpp" />
     <ClCompile Include="min_coverage_finder.cpp" />

@@ -4,6 +4,7 @@
 #include "../Paull-Unger Minimization Library Legacy/max_classes_solver.h"
 #include <iostream>
 #include "../Paull-Unger Minimization Library Legacy/min_coverage_finder.h"
+#include "../Paull-Unger Minimization Library Legacy/fsm_builder.h"
 
 using namespace::melee_synthesis;
 using namespace::paull_unger;
@@ -32,6 +33,13 @@ int main()
 
 	min_coverage_finder min_coverage(f_table);
 	auto min_class_set = min_coverage.find(max_classes);
+
+	fsm_builder builder(min_class_set, g_table);
+	auto f_table_min = builder.build_states_table();
+	auto g_table_min = builder.build_outs_table();
+
+	f_table_min.print(std::cout);
+	g_table_min.print(std::cout);
 
 	return 0;
 }

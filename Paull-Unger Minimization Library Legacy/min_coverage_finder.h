@@ -13,7 +13,6 @@ namespace paull_unger
 	private:
 		ms::table _f_table;
 		class_set_ordered _classes;
-		class_set_ordered _new_classes;
 		std::map<state_class, std::vector<state_class>> _coverage;
 		std::set<state_class> _exists_coverage;
 

@@ -139,11 +139,9 @@ paull_unger::min_coverage_finder::min_coverage_finder(ms::table f_table)
 std::map<state_class, std::vector<state_class>> min_coverage_finder::find(class_set_ordered max_classes)
 {
 	_classes = max_classes;
-	_new_classes = {};
 
 	auto unique_states = find_unique_states();
 	auto unique_class = find_unique_class(unique_states);
-	_new_classes.insert(unique_class);
 
 	set<state_class> classes_from_expand;
 	classes_from_expand.insert(unique_class);
