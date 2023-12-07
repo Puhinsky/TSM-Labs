@@ -3,6 +3,7 @@
 #include "../Paull-Unger Minimization Library Legacy/full_compability_solver.h"
 #include "../Paull-Unger Minimization Library Legacy/max_classes_solver.h"
 #include <iostream>
+#include "../Paull-Unger Minimization Library Legacy/min_coverage_finder.h"
 
 using namespace::melee_synthesis;
 using namespace::paull_unger;
@@ -28,6 +29,9 @@ int main()
 
 	max_classes_solver max_classes_solver;
 	auto max_classes = max_classes_solver.solve(full_table);
+
+	min_coverage_finder min_coverage(f_table);
+	auto min_class_set = min_coverage.find(max_classes);
 
 	return 0;
 }

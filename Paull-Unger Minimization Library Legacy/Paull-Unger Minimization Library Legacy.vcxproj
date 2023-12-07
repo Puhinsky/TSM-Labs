@@ -137,6 +137,7 @@
     <ClInclude Include="comp_type.h" />
     <ClInclude Include="full_compability_solver.h" />
     <ClInclude Include="max_classes_solver.h" />
+    <ClInclude Include="min_coverage_finder.h" />
     <ClInclude Include="pair.h" />
     <ClInclude Include="primary_compability_solver.h" />
     <ClInclude Include="state_pair.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="comp_table.cpp" />
     <ClCompile Include="full_compability_solver.cpp" />
     <ClCompile Include="max_classes_solver.cpp" />
+    <ClCompile Include="min_coverage_finder.cpp" />
     <ClCompile Include="pair.cpp" />
     <ClCompile Include="primary_compability_solver.cpp" />
     <ClCompile Include="state_pair.cpp" />

@@ -14,6 +14,6 @@ namespace paull_unger
 
 	public:
 		max_classes_solver();
-		class_set solve(comp_table comp_table);
+		class_set_ordered solve(comp_table comp_table);
 	};
 }

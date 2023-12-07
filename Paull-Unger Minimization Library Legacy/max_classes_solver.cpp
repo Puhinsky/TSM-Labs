@@ -19,9 +19,10 @@ state_class paull_unger::max_classes_solver::get_class_by_state(unsigned long lo
 paull_unger::max_classes_solver::max_classes_solver()
 {}
 
-class_set paull_unger::max_classes_solver::solve(const comp_table comp_table)
+class_set_ordered paull_unger::max_classes_solver::solve(const comp_table comp_table)
 {
 	_comp_table = comp_table;
+	class_set_ordered ordered_classes;
 
 	class_set classes;
 	classes = union_set_state(classes, _comp_table.size() + 1);
@@ -36,5 +37,10 @@ class_set paull_unger::max_classes_solver::solve(const comp_table comp_table)
 		classes = reduce_set(union_set_set(classes, union_set_state(intersect_set_class(classes, get_class_by_state(state_a)), state_a)));
 	}
 
-	return classes;
+	for (const auto& state_class : classes)
+	{
+		ordered_classes.insert(state_class);
+	}
+
+	return ordered_classes;
 }

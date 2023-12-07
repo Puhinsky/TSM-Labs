@@ -90,22 +90,13 @@ class_set paull_unger::reduce_set(const class_set& set)
 		}
 	}
 
-	/*for (const auto& class_a : set)
-	{
-		for (const auto& class_b : set)
-		{
-			if (class_a == class_b)
-				continue;
-
-			state_class intersection;
-			set_intersection(class_a.cbegin(), class_a.cend(), class_b.cbegin(), class_b.cend(), inserter(intersection, intersection.begin()));
-
-			if (intersection == class_b)
-				result.insert(class_a);
-			else
-				result.insert(class_b);
-		}
-	}*/
-
 	return result;
+}
+
+bool paull_unger::class_compare::operator()(const state_class& lhs, const state_class& rhs) const
+{
+	if (lhs.size() != rhs.size())
+		return lhs.size() < rhs.size();
+	else
+		return lhs < rhs;
 }
