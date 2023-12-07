@@ -9,8 +9,8 @@ using namespace::paull_unger;
 
 #define WORK_DIR "resources/"
 
-#define F_TABLE_L WORK_DIR "f_table.txt"
-#define G_TABLE_L WORK_DIR "g_table.txt"
+#define F_TABLE_L WORK_DIR "f_table1.txt"
+#define G_TABLE_L WORK_DIR "g_table1.txt"
 
 int main()
 {

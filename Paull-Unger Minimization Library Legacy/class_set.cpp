@@ -53,3 +53,59 @@ class_set paull_unger::intersect_set_class(const class_set& set, const state_cla
 
 	return result;
 }
+
+class_set paull_unger::reduce_set(const class_set& set)
+{
+	class_set result;
+
+	for (const auto& class_a : set)
+	{
+		for (const auto& class_b : set)
+		{
+			if (class_a == class_b)
+				continue;
+
+			if (includes(class_a.cbegin(), class_a.cend(), class_b.cbegin(), class_b.cend()))
+			{
+				result.insert(class_a);
+				result.erase(class_b);
+			}
+			else
+			{
+				bool is_not_sub_set = true;
+
+				for (const auto& class_c : result)
+				{
+					if (includes(class_c.cbegin(), class_c.cend(), class_b.cbegin(), class_b.cend()))
+					{
+						is_not_sub_set = false;
+
+						break;
+					}
+				}
+
+				if (is_not_sub_set)
+					result.insert(class_b);
+			}
+		}
+	}
+
+	/*for (const auto& class_a : set)
+	{
+		for (const auto& class_b : set)
+		{
+			if (class_a == class_b)
+				continue;
+
+			state_class intersection;
+			set_intersection(class_a.cbegin(), class_a.cend(), class_b.cbegin(), class_b.cend(), inserter(intersection, intersection.begin()));
+
+			if (intersection == class_b)
+				result.insert(class_a);
+			else
+				result.insert(class_b);
+		}
+	}*/
+
+	return result;
+}
