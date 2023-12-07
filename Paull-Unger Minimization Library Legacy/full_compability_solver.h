@@ -13,7 +13,8 @@ namespace paull_unger
 		ms::table _f_table;
 		comp_table _comp_table;
 
-		bool check_compitability(pair main_pair, pair input_pair);
+		bool try_get_none_compatible_pair(state_pair& pair);
+		void set_none_by_dependency(const state_pair& none_comp_pair);
 
 	public:
 		full_compability_solver(ms::table f_table);

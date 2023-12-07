@@ -27,7 +27,7 @@
     <ClInclude Include="full_compability_solver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="comp_pair.h">
+    <ClInclude Include="comp_value.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="comp_type.h">
@@ -37,6 +37,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="max_classes_solver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="state_pair.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,13 +56,16 @@
     <ClCompile Include="full_compability_solver.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="comp_pair.cpp">
+    <ClCompile Include="comp_value.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="class_set.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="max_classes_solver.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="state_pair.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -41,8 +41,3 @@ bool pair::is_compatible_by_outs() const
 	return _value_a.get_value() == _value_b.get_value();
 }
 
-size_t paull_unger::pair::hash::operator()(const pair& value) const
-{
-	return std::hash<table_value>()(value._value_a)
-		^ std::hash<table_value>()(value._value_b);
-}

@@ -9,7 +9,7 @@ state_class paull_unger::max_classes_solver::get_class_by_state(unsigned long lo
 
 	for (unsigned long long state_b = state; state_b < _comp_table.size(); ++state_b)
 	{
-		if (!_comp_table.get_value(state, state_b))
+		if (_comp_table.get_value(state, state_b).is_compatible())
 			continue;
 
 		result.insert(state);

@@ -14,11 +14,11 @@ comp_table::comp_table(unsigned long long states_count)
 		_table[i].resize(i + 1);
 
 		for (auto value : _table[i])
-			value = true;
+			value = comp_value();
 	}
 }
 
-void comp_table::set_value(bool value, unsigned long long state_a, unsigned long long state_b)
+void comp_table::set_value(comp_value value, unsigned long long state_a, unsigned long long state_b)
 {
 	if (state_a > state_b)
 		_table[state_a - 1][state_b] = value;
@@ -26,7 +26,7 @@ void comp_table::set_value(bool value, unsigned long long state_a, unsigned long
 		_table[state_b - 1][state_a] = value;
 }
 
-bool comp_table::get_value(unsigned long long state_a, unsigned long long state_b) const
+comp_value comp_table::get_value(unsigned long long state_a, unsigned long long state_b) const
 {
 	if (state_a > state_b)
 		return _table[state_a - 1][state_b];

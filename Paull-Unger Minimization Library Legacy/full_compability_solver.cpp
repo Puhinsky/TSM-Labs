@@ -2,35 +2,41 @@
 
 using namespace::std;
 using namespace::paull_unger;
+using namespace::melee_synthesis;
 
-bool full_compability_solver::check_compitability(pair main_pair, pair input_pair)
+bool paull_unger::full_compability_solver::try_get_none_compatible_pair(state_pair& pair)
 {
-	if (input_pair.get_a() == input_pair.get_b())
-		return true;
-
-	if (!_comp_table.get_value(input_pair.get_a().get_value() - 1, input_pair.get_b().get_value() - 1))
-		return false;
-
-	for (unsigned long long input = 0; input < _f_table.get_height(); ++input)
+	for (unsigned long long state_a = 0; state_a < _f_table.get_width() - 1; ++state_a)
 	{
-		pair states_pair(_f_table.get_value(input, input_pair.get_a().get_value() - 1), _f_table.get_value(input, input_pair.get_b().get_value() - 1));
+		for (unsigned long long state_b = state_a + 1; state_b < _f_table.get_width(); ++state_b)
+		{
+			if (_comp_table.get_value(state_a, state_b).is_none_compatible())
+			{
+				pair = state_pair({ table_value(state_a + 1), table_value(state_b + 1) });
+				_comp_table.set_value(comp_value(CHECKED), state_a, state_b);
 
-		if (states_pair.is_compatible(input_pair))
-			continue;
-
-		if (states_pair.is_compatible(main_pair))
-			continue;
-
-		if (check_compitability(main_pair, states_pair))
-			continue;
-		else
-			return false;
+				return true;
+			}
+		}
 	}
 
-	return true;
+	return false;
 }
 
-full_compability_solver::full_compability_solver(ms::table f_table)
+void paull_unger::full_compability_solver::set_none_by_dependency(const state_pair& none_comp_pair)
+{
+	for (unsigned long long state_a = 0; state_a < _f_table.get_width() - 1; ++state_a)
+	{
+		for (unsigned long long state_b = state_a + 1; state_b < _f_table.get_width(); ++state_b)
+		{
+			auto pair = _comp_table.get_value(state_a, state_b);
+			pair.check_for_dependency(none_comp_pair);
+			_comp_table.set_value(pair, state_a, state_b);
+		}
+	}
+}
+
+paull_unger::full_compability_solver::full_compability_solver(ms::table f_table)
 {
 	_f_table = f_table;
 }
@@ -38,14 +44,11 @@ full_compability_solver::full_compability_solver(ms::table f_table)
 comp_table paull_unger::full_compability_solver::solve(comp_table primary_comp_table)
 {
 	_comp_table = primary_comp_table;
+	state_pair none_comp_pair;
 
-	for (unsigned long long state_a = 1; state_a < _f_table.get_width(); ++state_a)
+	while (try_get_none_compatible_pair(none_comp_pair))
 	{
-		for (unsigned long long state_b = state_a + 1; state_b < _f_table.get_width() + 1; ++state_b)
-		{
-			pair main_pair(state_a, state_b);
-			_comp_table.set_value(check_compitability(main_pair, main_pair), state_a - 1, state_b - 1);
-		}
+		set_none_by_dependency(none_comp_pair);
 	}
 
 	return _comp_table;
