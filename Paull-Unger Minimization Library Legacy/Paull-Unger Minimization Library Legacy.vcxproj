@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="abstract_simulator.h" />
     <ClInclude Include="class_set.h" />
     <ClInclude Include="comp_value.h" />
     <ClInclude Include="comp_table.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="state_pair.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="abstract_simulator.cpp" />
     <ClCompile Include="class_set.cpp" />
     <ClCompile Include="comp_value.cpp" />
     <ClCompile Include="comp_table.cpp" />

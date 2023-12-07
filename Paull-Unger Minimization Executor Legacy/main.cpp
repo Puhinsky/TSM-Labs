@@ -5,9 +5,12 @@
 #include <iostream>
 #include "../Paull-Unger Minimization Library Legacy/min_coverage_finder.h"
 #include "../Paull-Unger Minimization Library Legacy/fsm_builder.h"
+#include "../Polish Inverse Notation Library Legacy/abstract_sm.h"
+#include "../Paull-Unger Minimization Library Legacy/abstract_simulator.h"
 
 using namespace::melee_synthesis;
 using namespace::paull_unger;
+using namespace::polish_inverse;
 
 #define WORK_DIR "resources/"
 
@@ -39,7 +42,24 @@ int main()
 	auto g_table_min = builder.build_outs_table();
 
 	f_table_min.print(std::cout);
+	std::cout << '\n';
 	g_table_min.print(std::cout);
+	std::cout << '\n';
+
+	//CHECK
+	std::vector<unsigned long long> check_word{ 3, 1, 2, 3, 2, 3 };
+	abstract_sm defaut_sm(1, f_table, g_table, false);
+	abstract_sm min_sm(1, f_table_min, g_table_min, false);
+
+	abstract_simulator default_simulator(defaut_sm);
+	abstract_simulator min_simulator(min_sm);
+
+	default_simulator.simulate(check_word, 1);
+	min_simulator.simulate(check_word, 1);
+
+	default_simulator.get_report().print(std::cout);
+	std::cout << '\n';
+	min_simulator.get_report().print(std::cout);
 
 	return 0;
 }

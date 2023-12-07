@@ -32,6 +32,9 @@
     <ProjectReference Include="..\Paull-Unger Minimization Library Legacy\Paull-Unger Minimization Library Legacy.vcxproj">
       <Project>{88ec0ca0-8890-4aa9-979a-d2da10976638}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Polish Inverse Notation Library Legacy\Polish Inverse Notation Library Legacy.vcxproj">
+      <Project>{8c7d3f68-922c-4e1d-9b9a-ea8ad7866c2d}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
