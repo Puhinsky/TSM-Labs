@@ -77,3 +77,11 @@ bool dnf::calculate_function(unsigned long long value) const
 
 	return result;
 }
+
+void dnf::print_function(std::ostream& os) const
+{
+	for (unsigned long long value = 0; value < _terms_count; ++value)
+	{
+		os << calculate_function(value);
+	}
+}

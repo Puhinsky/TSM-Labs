@@ -18,6 +18,7 @@ namespace quine_mc_cluskey
 		bool try_min_to_tdnf();
 		void min_to_mdnf();
 		bool calculate_function(unsigned long long value) const;
+		void print_function(std::ostream& os) const;
 		void print(std::ostream& os) const;
 		void save(std::string file_path) const;
 	};

@@ -40,7 +40,7 @@ dnf get_dnf(std::vector<logic_value> function)
 {
 	minterms_set minterms;
 
-	for (auto i = 0; i < function.size(); ++i)
+	for (unsigned long long i = 0; i < function.size(); ++i)
 	{
 		auto term = function[i];
 
